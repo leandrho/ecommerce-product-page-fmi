@@ -1,16 +1,22 @@
 ---
+import Header from "../components/Header.astro"
+import MainLayout from "../layouts/MainLayout.astro"
 
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+		<Header />
+	  
+		<!-- Sneaker Company
+	  
+		<h2 class="font-black text-6xl text-orangeCustom">Fall Limited Edition Sneakers	</h2>
+	  
+		These low-profile sneakers are your perfect casual wear companion. Featuring a 
+		durable rubber outer sole, they'll withstand everything the weather can offer.
+	  
+		$125.00
+		50%
+		$250.00
+	  
+		0
+		Add to cart -->
+</MainLayout>
