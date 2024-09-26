@@ -1,0 +1,23 @@
+---
+import { SideBar } from "./react/SideBar"
+import Brand from "./ui/Brand.astro"
+import Navbar from "./ui/Navbar.astro"
+import UserAvatarMenu from "./ui/UserAvatarMenu.astro"
+import {Cart} from "./react/Cart"
+
+---
+<header class="flex justify-between items-center pt-5 pb-6 px-6 border-b border-[#e9e9e9] border-solid">
+    <div class="flex items-baseline gap-4 md:hidden">
+        <SideBar client:load/>
+        <Brand/>
+    </div>
+    <div class="hidden md:flex md:items-center">
+        <Brand/>
+        <Navbar /> 
+    </div>
+    <div class="flex items-center gap-6">
+        <Cart client:load/> 
+        <UserAvatarMenu/>
+    </div>
+    
+</header>

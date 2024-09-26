@@ -1,0 +1,10 @@
+---
+import HeroContent from './HeroContent.astro'
+import {HeroGallery} from './react/HeroGallery'
+
+
+---
+<section class="flex flex-col md:mx-10 ">
+    <HeroGallery client:load/>
+    <HeroContent />
+</section>

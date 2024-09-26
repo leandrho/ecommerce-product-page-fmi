@@ -1,0 +1,35 @@
+---
+import '@fontsource/kumbh-sans';
+---
+<html lang="en">
+	<head>
+		<!-- <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head> -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+		<title>Frontend Mentor | E-commerce product page</title>
+	</head>	
+	<body class="min-h-screen">
+        <slot/>
+    </body>
+</html>
+<style is:global>
+    html{
+        @apply font-sans;
+        font-size: 16px;
+    }
+    *,*::after,*::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    img{
+        display: block;
+        max-width: 100%;
+    }
+</style>

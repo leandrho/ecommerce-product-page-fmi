@@ -1,0 +1,17 @@
+---
+import { HeroActions } from "./react/HeroActions"
+import {products} from "../data/db";
+const prod = products[0];
+---
+<div class="content p-6">
+    <div class="mb-6">
+        <p class="text-darkGrayishBlueCustom font-bold uppercase text-[13px] tracking-widest mb-2">{prod.company}</p>
+        <h2 class="font-black text-[29px] text-veryDarkBlueCustom mb-4 leading-tight">{prod.name}</h2>
+      
+       <p class="text-darkGrayishBlueCustom  text-[15px] leading-[1.8] md:text-base">
+            {prod.description}
+        </p>
+
+    </div>
+    <HeroActions product={prod} client:load/>
+</div>
