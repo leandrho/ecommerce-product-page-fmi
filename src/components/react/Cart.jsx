@@ -36,7 +36,7 @@ export const Cart = () => {
                             <p className="font-bold text-base text-darkGrayishBlueCustom">Your cart is empty.</p>
                         </div>
                     :
-                    <div className="flex flex-col gap-6 p-6 ">
+                    <div className="flex flex-col gap-8 px-6 py-8 ">
                         {
                             cart.map( prod => (
                                 <div key={prod.id} className="flex gap-4 items-center justify-between">{/* Product */}
