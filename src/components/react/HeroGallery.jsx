@@ -21,8 +21,8 @@ export const HeroGallery = () => {
     }
     return (
         <>
-            <div className="flex flex-col gap-8 max-w-[450px]">
-                <div className="h-[300px] relative md:rounded-xl">
+            <div className="flex flex-col gap-8 max-w-[450px] w-full">
+                <div className="h-[300px] relative md:rounded-xl lg:h-auto">
                     <img src={images[curImg]} alt="" className="w-full h-full object-cover md:rounded-xl"/>
                     <button className="w-10 h-10 rounded-full bg-white flex justify-center items-center
                                 absolute top-[50%] left-4 translate-y-[-50%]  hover:text-orangeCustom
