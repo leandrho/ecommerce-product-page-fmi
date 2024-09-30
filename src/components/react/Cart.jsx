@@ -22,11 +22,11 @@ export const Cart = () => {
            >
                 <img src="./images/icon-cart.svg" alt=""/>
                 {
-                    count > 0 && <p className="absolute right-[-8px] top-[-8px] text-[10px] font-bold px-2 bg-orangeCustom rounded-lg text-white leading-snug  animate-bounce2">{count}</p>
+                    count > 0 && <p className="absolute right-[50%] translate-x-[-50%] top-[-8px] text-[10px] font-bold px-2 bg-orangeCustom rounded-lg text-white leading-snug  animate-bounce2">{count}</p>
                 }
            </button>
            
-           <div ref={basket} className="fixed top-20 left-[10px] max-w-[355px] w-full min-h-[256px] bg-white rounded-lg shadow-xl z-50 flex-col animate-bounce3 hidden">{/* Basket */}
+           <div ref={basket} className="absolute top-20 right-[10px] max-w-[355px] w-[95%] sm:max-w-[355px] min-h-[256px] bg-white rounded-lg shadow-xl z-50 flex-col animate-bounce3 hidden xl:right-[-40px]">{/* Basket */}
                 <h2 className="p-4 pb-5 font-bold">Cart</h2>
                 <div className="h-[1px] w-full bg-grayisBlueCustom"></div>
                 {
