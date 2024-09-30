@@ -44,7 +44,7 @@ export const HeroGallery = () => {
                         {
                             images.map((img, index)=>{
                                 return <li key={index} className="gallery-item">
-                                    <button className={curImg === index? "rounded-xl active":"rounded-xl"}
+                                    <button className={curImg === index? "rounded-xl active":"rounded-xl cursor-pointer hover:opacity-70"}
                                             onClick={(e)=>{setCurrentImage(e, index)}}
                                     > 
                                         <img src={img} alt="" className="rounded-xl w-full object-cover"/>
