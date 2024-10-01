@@ -1,10 +1,12 @@
 import { useRef, useState } from "react";
 import '/src/styles/styles.css';
+import { FloatGallery } from "./FloatGallery";
 const images = ['./images/image-product-1.jpg','./images/image-product-2.jpg','./images/image-product-3.jpg','./images/image-product-4.jpg'];
 
 export const HeroGallery = () => {
     const [curImg, setCurImg] = useState(0);
-    const list = useRef(0)
+    const [isFloatOpen, setFloatOpen] = useState(false);
+    const float = useRef(0)
     const nextImage = ()=>{
         if(curImg < images.length -1)
             setCurImg(curImg+1);
@@ -19,11 +21,20 @@ export const HeroGallery = () => {
         // e.target.classList.add("active");
         setCurImg(idx);
     }
+    
+    const openFloatGallery = ()=>{
+        setFloatOpen(true);
+        console.log('OPEN??')
+    }
     return (
         <>
             <div className="flex flex-col gap-8 max-w-[450px] w-full">
                 <div className="h-[300px] relative md:rounded-xl lg:h-auto">
-                    <img src={images[curImg]} alt="" className="w-full h-full object-cover md:rounded-xl"/>
+                    <button className="w-full h-full"
+                            onClick={()=>openFloatGallery()}
+                    >
+                        <img src={images[curImg]} alt="" className="w-full h-full object-cover md:rounded-xl"/>
+                    </button>
                     <button className="w-10 h-10 rounded-full bg-white flex justify-center items-center
                                 absolute top-[50%] left-4 translate-y-[-50%]  hover:text-orangeCustom
                                 md:hidden"
@@ -55,6 +66,7 @@ export const HeroGallery = () => {
                     </ul>
                 </div>
             </div>
+            <FloatGallery isOpen={isFloatOpen} setOpen={setFloatOpen}/>
         </>
     )
 }
