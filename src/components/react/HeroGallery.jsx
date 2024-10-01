@@ -16,15 +16,11 @@ export const HeroGallery = () => {
             setCurImg(curImg-1);
     }
     const setCurrentImage = (e, idx)=>{
-        // const ul = document.querySelector('#gallery-list').querySelectorAll('li');
-        // ul.forEach(l => l.firstElementChild.firstElementChild.classList.remove('active'));
-        // e.target.classList.add("active");
         setCurImg(idx);
     }
     
     const openFloatGallery = ()=>{
         setFloatOpen(true);
-        console.log('OPEN??')
     }
     return (
         <>
@@ -66,7 +62,10 @@ export const HeroGallery = () => {
                     </ul>
                 </div>
             </div>
-            <FloatGallery isOpen={isFloatOpen} setOpen={setFloatOpen}/>
+            <div className="hidden lg:block fixed">
+                <FloatGallery isOpen={isFloatOpen} setOpen={setFloatOpen}/>
+            </div>
+           
         </>
     )
 }

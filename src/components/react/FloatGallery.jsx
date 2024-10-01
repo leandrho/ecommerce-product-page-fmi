@@ -13,9 +13,6 @@ export const FloatGallery = ({isOpen, setOpen}) => {
             setCurImg(curImg-1);
     }
     const setCurrentImage = (e, idx)=>{
-        // const ul = document.querySelector('#gallery-list').querySelectorAll('li');
-        // ul.forEach(l => l.firstElementChild.firstElementChild.classList.remove('active'));
-        // e.target.classList.add("active");
         setCurImg(idx);
     }
   return (
