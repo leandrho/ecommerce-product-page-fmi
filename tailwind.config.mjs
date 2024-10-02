@@ -42,10 +42,20 @@ export default {
 					  transform: 'scale(1)',
 					},
 				},
-			  },
+				bounce4: {
+					'0%': {
+					  transform: 'scale(0)',
+	  
+					},
+					'100%': {
+					  transform: 'scale(1)',
+					},
+				},
+			  },	
 			  animation: {
 				"bounce2": 'bounce2 0.5s',
-				"bounce3": 'bounce3 0.2s'
+				"bounce3": 'bounce3 0.2s',
+				"bounce4": 'bounce4 0.75s'
 			  },
 		},
 	},

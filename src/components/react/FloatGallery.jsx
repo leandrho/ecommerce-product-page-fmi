@@ -19,7 +19,7 @@ export const FloatGallery = ({isOpen, setOpen}) => {
     <>
     <div className={ isOpen ? 
                      "fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-screen" + 
-                     " after:content-[''] after:absolute after:top-0 after:left-0 after:w-screen after:h-screen after:bg-black after:opacity-60 after:z-[-10] "
+                     " after:content-[''] after:absolute after:top-0 after:left-0 after:w-screen after:h-screen after:bg-black after:opacity-60 after:z-[-10]"
                      :" hidden "
     }>
         
@@ -29,7 +29,7 @@ export const FloatGallery = ({isOpen, setOpen}) => {
             >
                 <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="currentColor" fillRule="evenodd"/></svg>
             </button>
-            <div className="h-[300px] relative md:rounded-xl lg:h-auto ">
+            <div className="h-[300px] relative md:rounded-xl lg:h-auto animate-bounce4">
                 <img src={images[curImg]} alt="" className="w-full h-full object-cover md:rounded-xl"/>
                 <button className="w-10 h-10 rounded-full bg-white flex justify-center items-center
                             absolute top-[50%] left-0 translate-x-[-50%] translate-y-[-50%]  hover:text-orangeCustom
@@ -46,7 +46,7 @@ export const FloatGallery = ({isOpen, setOpen}) => {
                         <svg className="scale-75" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" strokeWidth="4" fill="none" fillRule="evenodd"/></svg>
                 </button>
             </div>
-            <div className="flex px-6 mt-3">
+            <div className="flex px-6 mt-3 animate-bounce4">
                 <ul className="flex justify-between gap-6" id='gallery-list'>
                     {
                         images.map((img, index)=>{
