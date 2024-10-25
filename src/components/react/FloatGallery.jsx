@@ -12,7 +12,7 @@ export const FloatGallery = ({isOpen, setOpen}) => {
         if(curImg > 0)
             setCurImg(curImg-1);
     }
-    const setCurrentImage = (e, idx)=>{
+    const setCurrentImage = (idx)=>{
         setCurImg(idx);
     }
   return (
@@ -52,7 +52,7 @@ export const FloatGallery = ({isOpen, setOpen}) => {
                         images.map((img, index)=>{
                             return <li key={index} className="gallery-item rounded-xl">
                                 <button className={curImg === index? "rounded-xl active":"hover:bg-white rounded-xl cursor-pointer  "}
-                                        onClick={(e)=>{setCurrentImage(e, index)}}
+                                        onClick={()=>{setCurrentImage(index)}}
                                 > 
                                     <img src={img} alt="" className="rounded-xl w-full object-cover hover:opacity-60"/>
                                 </button>

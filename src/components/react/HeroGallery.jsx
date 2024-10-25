@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import '/src/styles/styles.css';
 import { FloatGallery } from "./FloatGallery";
 const images = ['./images/image-product-1.jpg','./images/image-product-2.jpg','./images/image-product-3.jpg','./images/image-product-4.jpg'];
@@ -14,7 +14,7 @@ export const HeroGallery = () => {
         if(curImg > 0)
             setCurImg(curImg-1);
     }
-    const setCurrentImage = (e, idx)=>{
+    const setCurrentImage = (idx)=>{
         setCurImg(idx);
     }
     
@@ -51,7 +51,7 @@ export const HeroGallery = () => {
                             images.map((img, index)=>{
                                 return <li key={index} className="gallery-item">
                                     <button className={curImg === index? "rounded-xl active":"rounded-xl cursor-pointer hover:opacity-70"}
-                                            onClick={(e)=>{setCurrentImage(e, index)}}
+                                            onClick={()=>{setCurrentImage(index)}}
                                     > 
                                         <img src={img} alt="" className="rounded-xl w-full object-cover"/>
                                     </button>
