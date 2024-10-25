@@ -6,7 +6,6 @@ const images = ['./images/image-product-1.jpg','./images/image-product-2.jpg','.
 export const HeroGallery = () => {
     const [curImg, setCurImg] = useState(0);
     const [isFloatOpen, setFloatOpen] = useState(false);
-    const float = useRef(0)
     const nextImage = ()=>{
         if(curImg < images.length -1)
             setCurImg(curImg+1);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
