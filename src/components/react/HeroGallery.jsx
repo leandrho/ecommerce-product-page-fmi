@@ -27,6 +27,7 @@ export const HeroGallery = () => {
                 <div className="h-[300px] relative md:rounded-xl lg:h-auto">
                     <button className="w-full h-full"
                             onClick={()=>openFloatGallery()}
+                            aria-label="Picture Button"
                     >
                         <img src={images[curImg]} alt="" className="w-full h-full object-cover md:rounded-xl"/>
                     </button>
@@ -34,6 +35,7 @@ export const HeroGallery = () => {
                                 absolute top-[50%] left-4 translate-y-[-50%]  hover:text-orangeCustom
                                 md:hidden"
                             onClick={()=>{prevImage()}}
+                            aria-label="Hero Gallery Previous Button"
                             >
                         <svg className="scale-75" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" strokeWidth="4" fill="none" fillRule="evenodd"/></svg>
                     </button>
@@ -41,17 +43,19 @@ export const HeroGallery = () => {
                                 absolute top-[50%] right-4 translate-y-[-50%] hover:text-orangeCustom
                                 md:hidden"
                             onClick={()=>{nextImage()}}
+                            aria-label="Hero Gallery Next Button"
                             >
                             <svg className="scale-75" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" strokeWidth="4" fill="none" fillRule="evenodd"/></svg>
                     </button>
                 </div>
                 <div className="hidden md:flex">
-                    <ul className="flex justify-between gap-6" id='gallery-list'>
+                    <ul className="flex justify-between gap-6">
                         {
                             images.map((img, index)=>{
                                 return <li key={index} className="gallery-item">
                                     <button className={curImg === index? "rounded-xl active":"rounded-xl cursor-pointer hover:opacity-70"}
                                             onClick={()=>{setCurrentImage(index)}}
+                                            aria-label="Hero Gallery Open Button"
                                     > 
                                         <img src={img} alt="" className="rounded-xl w-full object-cover"/>
                                     </button>

@@ -6,6 +6,7 @@ export const SideBar = () => {
         <nav className="text-sm text-darkGrayishBlueCustom">
             <button className="flex items-center border-none min-w-4"
                     onClick={()=>setIsOpen(!isOpen)}
+                    aria-label="Buttons Sidebar"
             >
                 <img src={isOpen?"./images/icon-close.svg":"./images/icon-menu.svg"} alt="" className="w-full z-[100]"/>
             </button>
