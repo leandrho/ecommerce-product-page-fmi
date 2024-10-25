@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { transform } from 'typescript'
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,css}'],
 	theme: {
@@ -9,7 +8,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Kumbh Sans', ...defaultTheme.fontFamily.sans],
+				kumbh: ['Kumbh Sans Variable', ...defaultTheme.fontFamily.sans],
 			  },
 			  colors: {
 				orangeCustom: "#ff7d1a",
